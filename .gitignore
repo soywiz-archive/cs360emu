@@ -1,0 +1,11 @@
+
+/TestResults
+/Cs360Emu/obj
+/Cs360Emu/bin
+/Cs360Emu.Core/bin
+/Cs360Emu.Core/obj
+/Cs360Emu.Hle/bin
+/Cs360Emu.Hle/obj
+/Cs360Emu.Tests/bin
+/Cs360Emu.Tests/obj
+*.suo

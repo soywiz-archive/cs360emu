@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs360Emu", "Cs360Emu\Cs360Emu.csproj", "{F9E47DD8-22CD-44CB-960F-092AB1183883}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs360Emu.Hle", "Cs360Emu.Hle\Cs360Emu.Hle.csproj", "{D5BF1612-E4BB-4423-8DFF-DA99104F843B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpUtils", "..\..\csharputils\CSharpUtils\CSharpUtils\CSharpUtils.csproj", "{746FADF2-D613-4FFD-8551-2181ADAE3CD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs360Emu.Core", "Cs360Emu.Core\Cs360Emu.Core.csproj", "{77744DD7-93B7-4F13-B5DA-6C170EE47376}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs360Emu.Tests", "Cs360Emu.Tests\Cs360Emu.Tests.csproj", "{A13FF1E5-8963-4A2B-8449-924A2C36CD60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BD7F6062-8007-453F-A1CB-224C23A46985}"
+	ProjectSection(SolutionItems) = preProject
+		Cs360Emu.vsmdi = Cs360Emu.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Cs360Emu.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{746FADF2-D613-4FFD-8551-2181ADAE3CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746FADF2-D613-4FFD-8551-2181ADAE3CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746FADF2-D613-4FFD-8551-2181ADAE3CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746FADF2-D613-4FFD-8551-2181ADAE3CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77744DD7-93B7-4F13-B5DA-6C170EE47376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77744DD7-93B7-4F13-B5DA-6C170EE47376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77744DD7-93B7-4F13-B5DA-6C170EE47376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77744DD7-93B7-4F13-B5DA-6C170EE47376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13FF1E5-8963-4A2B-8449-924A2C36CD60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13FF1E5-8963-4A2B-8449-924A2C36CD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13FF1E5-8963-4A2B-8449-924A2C36CD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13FF1E5-8963-4A2B-8449-924A2C36CD60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5BF1612-E4BB-4423-8DFF-DA99104F843B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5BF1612-E4BB-4423-8DFF-DA99104F843B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5BF1612-E4BB-4423-8DFF-DA99104F843B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5BF1612-E4BB-4423-8DFF-DA99104F843B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E47DD8-22CD-44CB-960F-092AB1183883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E47DD8-22CD-44CB-960F-092AB1183883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E47DD8-22CD-44CB-960F-092AB1183883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E47DD8-22CD-44CB-960F-092AB1183883}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
