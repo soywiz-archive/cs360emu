@@ -9,3 +9,6 @@
 /Cs360Emu.Tests/bin
 /Cs360Emu.Tests/obj
 *.suo
+/TestInput
+/docs/modules
+/docs/Xbox360.xml

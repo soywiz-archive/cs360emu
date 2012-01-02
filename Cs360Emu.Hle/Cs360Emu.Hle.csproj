@@ -19,6 +19,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,11 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExportAttribute.cs" />
+    <Compile Include="Formats\DosExe.cs" />
+    <Compile Include="Formats\Pe.cs" />
     <Compile Include="Formats\Xex.cs" />
+    <Compile Include="Modules\connectx.cs" />
+    <Compile Include="Modules\createprofile.cs" />
+    <Compile Include="Modules\syscall.cs" />
+    <Compile Include="Modules\syscall_old.cs" />
+    <Compile Include="Modules\vk.cs" />
+    <Compile Include="Modules\xam.cs" />
+    <Compile Include="Modules\xapi.cs" />
+    <Compile Include="Modules\xbdm.cs" />
+    <Compile Include="Modules\xboxkrnl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\csharputils\CSharpUtils\CSharpUtils\CSharpUtils.csproj">
+    <ProjectReference Include="..\..\csharputils\CSharpUtils\CSharpUtils\CSharpUtils.csproj">
       <Project>{746fadf2-d613-4ffd-8551-2181adae3cd1}</Project>
       <Name>CSharpUtils</Name>
     </ProjectReference>

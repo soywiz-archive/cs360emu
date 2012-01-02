@@ -19,6 +19,14 @@ namespace Cs360Emu.Core.Cpu
 			}
 		}
 
+		public short Imm16Signed
+		{
+			get
+			{
+				return (short)((Value >> 0) & 0xFFFF);
+			}
+		}
+
 		public uint A
 		{
 			get
@@ -36,6 +44,14 @@ namespace Cs360Emu.Core.Cpu
 		}
 
 		public uint D
+		{
+			get
+			{
+				return BitUtils.Extract(Value, 21, 5);
+			}
+		}
+
+		public uint S
 		{
 			get
 			{

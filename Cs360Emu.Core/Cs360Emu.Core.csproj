@@ -19,6 +19,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,18 +41,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cpu\Disassembler\Disassembler.cs" />
+    <Compile Include="Cpu\Dynarec\Compiler.Cpu.cs" />
+    <Compile Include="Cpu\Dynarec\Compiler.cs" />
+    <Compile Include="Cpu\Dynarec\CompilerState.cs" />
     <Compile Include="Cpu\Instruction.cs" />
     <Compile Include="Cpu\Instructions.InstructionType.cs" />
-    <Compile Include="Cpu\Registers.cs" />
     <Compile Include="Cpu\Instructions.cs" />
+    <Compile Include="Cpu\CpuThreadState.cs" />
+    <Compile Include="EmulatorState.cs" />
+    <Compile Include="Memory\Xbox360MemoryAbstract.cs" />
+    <Compile Include="Memory\Xbox360MemoryNormal.cs" />
+    <Compile Include="Memory\Xbox360MemoryStream.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\csharputils\CSharpUtils\CSharpUtils\CSharpUtils.csproj">
+    <ProjectReference Include="..\..\csharputils\CSharpUtils\CSharpUtils\CSharpUtils.csproj">
       <Project>{746fadf2-d613-4ffd-8551-2181adae3cd1}</Project>
       <Name>CSharpUtils</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

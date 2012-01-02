@@ -19,35 +19,22 @@ namespace Cs360Emu.Core.Cpu.Disassembler
 		/// <returns></returns>
 		public static String DissasembleSimple(Instruction InstructionValue)
 		{
-			foreach (var Field in typeof(Instructions).GetFields())
+			foreach (var InstructionType in Instructions.AllInstructions)
 			{
-				Object Value = null;
-				try
+				//Console.WriteLine("{0:X}, {1:X}, {2:X}", InstructionValue, InstructionType.Mask, InstructionType.Value);
+				if ((InstructionValue & InstructionType.Mask) == InstructionType.Value)
 				{
-					Value = Field.GetValue(null);
-				}
-				catch (Exception Exception)
-				{
-					Console.Error.WriteLine(Exception);
-				}
-				if (Value is Instructions.InstructionType)
-				{
-					var InstructionType = (Instructions.InstructionType)Value;
-					//Console.WriteLine("{0:X}, {1:X}, {2:X}", InstructionValue, InstructionType.Mask, InstructionType.Value);
-					if ((InstructionValue & InstructionType.Mask) == InstructionType.Value)
-					{
-						var FieldName = Field.Name.ToLower();
-						if (InstructionType.hasOE && InstructionValue.OE) FieldName += "o";
-						if (InstructionType.hasRc && InstructionValue.Rc) FieldName += ".";
-						var Result = String.Format("{0} {1}", FieldName, InstructionType.Format);
-						Result = Result.Replace("%rA", "r" + InstructionValue.A);
-						Result = Result.Replace("%rB", "r" + InstructionValue.B);
-						Result = Result.Replace("%rD", "r" + InstructionValue.D);
-						Result = Result.Replace("%SIMM", String.Format("0x{0:X}", InstructionValue.Imm16Unsigned));
-						//InstructionValue.Ra
+					var FieldName = InstructionType.Name;
+					if (InstructionType.hasOE && InstructionValue.OE) FieldName += "o";
+					if (InstructionType.hasRc && InstructionValue.Rc) FieldName += ".";
+					var Result = String.Format("{0} {1}", FieldName, InstructionType.Format);
+					Result = Result.Replace("%rA", "r" + InstructionValue.A);
+					Result = Result.Replace("%rB", "r" + InstructionValue.B);
+					Result = Result.Replace("%rD", "r" + InstructionValue.D);
+					Result = Result.Replace("%SIMM", String.Format("0x{0:X}", InstructionValue.Imm16Unsigned));
+					//InstructionValue.Ra
 
-						return Result;
-					}
+					return Result.Trim();
 				}
 			}
 			return String.Format("<Unknown:0x{0:X}>", InstructionValue.Value);

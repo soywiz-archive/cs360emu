@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs360Emu", "Cs360Emu\Cs360E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs360Emu.Hle", "Cs360Emu.Hle\Cs360Emu.Hle.csproj", "{D5BF1612-E4BB-4423-8DFF-DA99104F843B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpUtils", "..\..\csharputils\CSharpUtils\CSharpUtils\CSharpUtils.csproj", "{746FADF2-D613-4FFD-8551-2181ADAE3CD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpUtils", "..\csharputils\CSharpUtils\CSharpUtils\CSharpUtils.csproj", "{746FADF2-D613-4FFD-8551-2181ADAE3CD1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs360Emu.Core", "Cs360Emu.Core\Cs360Emu.Core.csproj", "{77744DD7-93B7-4F13-B5DA-6C170EE47376}"
 EndProject
