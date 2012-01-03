@@ -44,15 +44,6 @@
     <Compile Include="Formats\DosExe.cs" />
     <Compile Include="Formats\Pe.cs" />
     <Compile Include="Formats\Xex.cs" />
-    <Compile Include="Modules\connectx.cs" />
-    <Compile Include="Modules\createprofile.cs" />
-    <Compile Include="Modules\syscall.cs" />
-    <Compile Include="Modules\syscall_old.cs" />
-    <Compile Include="Modules\vk.cs" />
-    <Compile Include="Modules\xam.cs" />
-    <Compile Include="Modules\xapi.cs" />
-    <Compile Include="Modules\xbdm.cs" />
-    <Compile Include="Modules\xboxkrnl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +55,9 @@
       <Project>{77744dd7-93b7-4f13-b5da-6c170ee47376}</Project>
       <Name>Cs360Emu.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

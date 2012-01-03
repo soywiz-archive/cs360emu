@@ -314,6 +314,9 @@ namespace Cs360Emu.Hle.Formats
 			Pe = new Pe().LoadHeader(PeStream);
 
 			Console.WriteLine("SecurityInfoOffset: {0:X}", (uint)Header.SecurityInfoOffset);
+			var SecurityStream = LoadChunk(XexStream, Header.SecurityInfoOffset);
+			var NumberOfSections = (ushort)SecurityStream.ReadStruct<ushort_be>();
+			Console.WriteLine("NumberOfSections: {0:X}", NumberOfSections);
 
 			return this;
 		}
